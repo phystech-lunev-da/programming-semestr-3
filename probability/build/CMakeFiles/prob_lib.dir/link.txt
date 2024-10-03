@@ -1,0 +1,2 @@
+/usr/bin/ar qc libprob_lib.a CMakeFiles/prob_lib.dir/src/Dice.cpp.o CMakeFiles/prob_lib.dir/src/ThreeDicePool.cpp.o CMakeFiles/prob_lib.dir/src/BonusDice.cpp.o CMakeFiles/prob_lib.dir/src/PenaltyDice.cpp.o
+/usr/bin/ranlib libprob_lib.a
