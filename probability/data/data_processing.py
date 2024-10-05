@@ -2,37 +2,40 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 import numpy as np
 import pandas as pd
+from scipy.stats import uniform
+from scipy.signal import fftconvolve
+
+print("Draw plots: ")
 
 bonus_data = pd.read_csv("bonusdice_data.csv", sep=";")
 penalty_data = pd.read_csv("penaltydice_data.csv", sep=";")
 three_data = pd.read_csv("threedicepool_data.csv", sep=";")
+double_data = pd.read_csv("doubledice_data.csv", sep=";")
+double_with_inheritance = pd.read_csv("doubledice_data_with_inheritance.csv", sep=";")
 
-length1 = len(bonus_data.iloc[0])
-length3 = len(three_data.iloc[0])
+data = [bonus_data, penalty_data, three_data, double_data, double_with_inheritance]
 
-fig1, ax1 = plt.subplots(1, 1)
-fig2, ax2 = plt.subplots(1, 1)
-fig3, ax3 = plt.subplots(1, 1)
+figs = [None for _ in range(5)]
+axs = [None for _ in range(5)]
 
-ax1.set_title("Bonus Dice")
-ax2.set_title("Penalty Dice")
-ax3.set_title("Three Dice Pool")
-ax1.set_ylabel("P", rotation=0)
-ax2.set_ylabel("P", rotation=0)
-ax3.set_ylabel("P", rotation=0)
-ax1.set_xlabel("n")
-ax2.set_xlabel("n")
-ax3.set_xlabel("n")
-ax1.xaxis.set_major_locator(MaxNLocator(integer=True))
-ax2.xaxis.set_major_locator(MaxNLocator(integer=True))
-ax3.xaxis.set_major_locator(MaxNLocator(integer=True))
+for i in range(5):
+    figs[i], axs[i] = plt.subplots(1, 1)
 
-ax1.bar([i for i in range(1, length1 + 1)], bonus_data.iloc[0])
-ax2.bar([i for i in range(1, length1 + 1)], penalty_data.iloc[0])
-ax3.bar([i for i in range(1, length3 + 1)], three_data.iloc[0])
+axs[0].set_title("Bonus Dice")
+axs[1].set_title("Penalty Dice")
+axs[2].set_title("Three Dice Pool")
+axs[3].set_title("Double Dice")
+axs[4].set_title("Double Dice with Inheritance")
+for i in range(5):
+    axs[i].set_ylabel("P", rotation=0)
+    axs[i].set_xlabel("n")
+    axs[i].xaxis.set_major_locator(MaxNLocator(integer=True))
 
-plt.subplots_adjust(wspace=1, hspace=1)
-fig1.savefig("histogram1.jpg", format="jpg")
-fig2.savefig("histogram2.jpg", format="jpg")
-fig3.savefig("histogram3.jpg", format="jpg")
+for k in range(5):
+    axs[k].bar([i for i in range(1, len(data[k].iloc[:,1]) + 1)], data[k].iloc[:,1])
 
+#plt.subplots_adjust(wspace=1, hspace=1)
+for k in range(5):
+    figs[k].savefig(f"histogram{k+1}.jpg", format="jpg")
+
+print("End of drawing plots")
