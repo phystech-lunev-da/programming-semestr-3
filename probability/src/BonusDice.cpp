@@ -1,8 +1,8 @@
 
 #include "BonusDice.hpp"
 
-BonusDice::BonusDice(RandomValueInterface& arg1) : dice(arg1) {}
+BonusDice::BonusDice(unsigned max, unsigned seed) : Dice(max, seed) {}
 
 int BonusDice::roll() {
-    return std::max(dice.roll(), dice.roll());
+    return std::max(Dice::roll(), Dice::roll());
 }

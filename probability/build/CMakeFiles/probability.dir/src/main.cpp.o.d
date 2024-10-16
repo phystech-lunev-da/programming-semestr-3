@@ -166,6 +166,7 @@ CMakeFiles/probability.dir/src/main.cpp.o: \
  /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/ThreeDicePool.hpp \
  /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/BonusDice.hpp \
  /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/PenaltyDice.hpp \
+ /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/DoubleDice.hpp \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/exception \
  /usr/include/c++/11/bits/exception_ptr.h \

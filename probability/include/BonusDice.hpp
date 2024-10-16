@@ -2,10 +2,9 @@
 #pragma once
 #include "Dice.hpp"
 
-class BonusDice : public RandomValueInterface {
+
+class BonusDice : virtual public Dice {
 public:
-    BonusDice(RandomValueInterface&);
+    BonusDice(unsigned max, unsigned seed);
     int roll() override;
-private:
-    RandomValueInterface& dice;
 };

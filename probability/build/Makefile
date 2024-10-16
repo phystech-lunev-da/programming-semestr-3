@@ -190,6 +190,30 @@ src/Dice.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prob_lib.dir/build.make CMakeFiles/prob_lib.dir/src/Dice.cpp.s
 .PHONY : src/Dice.cpp.s
 
+src/DoubleDice.o: src/DoubleDice.cpp.o
+.PHONY : src/DoubleDice.o
+
+# target to build an object file
+src/DoubleDice.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prob_lib.dir/build.make CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o
+.PHONY : src/DoubleDice.cpp.o
+
+src/DoubleDice.i: src/DoubleDice.cpp.i
+.PHONY : src/DoubleDice.i
+
+# target to preprocess a source file
+src/DoubleDice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prob_lib.dir/build.make CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.i
+.PHONY : src/DoubleDice.cpp.i
+
+src/DoubleDice.s: src/DoubleDice.cpp.s
+.PHONY : src/DoubleDice.s
+
+# target to generate assembly for a file
+src/DoubleDice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prob_lib.dir/build.make CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.s
+.PHONY : src/DoubleDice.cpp.s
+
 src/PenaltyDice.o: src/PenaltyDice.cpp.o
 .PHONY : src/PenaltyDice.o
 
@@ -278,6 +302,9 @@ help:
 	@echo "... src/Dice.o"
 	@echo "... src/Dice.i"
 	@echo "... src/Dice.s"
+	@echo "... src/DoubleDice.o"
+	@echo "... src/DoubleDice.i"
+	@echo "... src/DoubleDice.s"
 	@echo "... src/PenaltyDice.o"
 	@echo "... src/PenaltyDice.i"
 	@echo "... src/PenaltyDice.s"

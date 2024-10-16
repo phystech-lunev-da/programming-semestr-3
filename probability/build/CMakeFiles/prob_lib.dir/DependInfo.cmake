@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/BonusDice.cpp" "CMakeFiles/prob_lib.dir/src/BonusDice.cpp.o" "gcc" "CMakeFiles/prob_lib.dir/src/BonusDice.cpp.o.d"
   "/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/Dice.cpp" "CMakeFiles/prob_lib.dir/src/Dice.cpp.o" "gcc" "CMakeFiles/prob_lib.dir/src/Dice.cpp.o.d"
+  "/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/DoubleDice.cpp" "CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o" "gcc" "CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o.d"
   "/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/PenaltyDice.cpp" "CMakeFiles/prob_lib.dir/src/PenaltyDice.cpp.o" "gcc" "CMakeFiles/prob_lib.dir/src/PenaltyDice.cpp.o.d"
   "/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/ThreeDicePool.cpp" "CMakeFiles/prob_lib.dir/src/ThreeDicePool.cpp.o" "gcc" "CMakeFiles/prob_lib.dir/src/ThreeDicePool.cpp.o.d"
   )

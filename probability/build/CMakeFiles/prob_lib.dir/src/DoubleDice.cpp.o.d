@@ -1,7 +1,8 @@
-CMakeFiles/probability.dir/src/ThreeDicePool.cpp.o: \
- /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/ThreeDicePool.cpp \
+CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o: \
+ /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/DoubleDice.cpp \
  /usr/include/stdc-predef.h \
- /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/ThreeDicePool.hpp \
+ /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/DoubleDice.hpp \
+ /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/BonusDice.hpp \
  /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/Dice.hpp \
  /usr/include/c++/11/random /usr/include/c++/11/cmath \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -162,4 +163,5 @@ CMakeFiles/probability.dir/src/ThreeDicePool.cpp.o: \
  /usr/include/c++/11/bits/random.tcc /usr/include/c++/11/numeric \
  /usr/include/c++/11/bits/stl_numeric.h /usr/include/c++/11/bit \
  /usr/include/c++/11/pstl/glue_numeric_defs.h \
- /usr/include/c++/11/pstl/execution_defs.h
+ /usr/include/c++/11/pstl/execution_defs.h \
+ /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/PenaltyDice.hpp

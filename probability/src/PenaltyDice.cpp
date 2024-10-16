@@ -1,8 +1,8 @@
 
 #include "PenaltyDice.hpp"
 
-PenaltyDice::PenaltyDice(RandomValueInterface& arg1) : dice(arg1) {}
+PenaltyDice::PenaltyDice(unsigned max, unsigned seed) : Dice(max, seed) {}
 
 int PenaltyDice::roll() {
-    return std::min(dice.roll(), dice.roll());
+    return std::min(Dice::roll(), Dice::roll());
 }

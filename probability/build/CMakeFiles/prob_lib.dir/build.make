@@ -125,12 +125,27 @@ CMakeFiles/prob_lib.dir/src/PenaltyDice.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prob_lib.dir/src/PenaltyDice.cpp.s"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/PenaltyDice.cpp -o CMakeFiles/prob_lib.dir/src/PenaltyDice.cpp.s
 
+CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o: CMakeFiles/prob_lib.dir/flags.make
+CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o: /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/DoubleDice.cpp
+CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o: CMakeFiles/prob_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o -MF CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o.d -o CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/DoubleDice.cpp
+
+CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/DoubleDice.cpp > CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.i
+
+CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/DoubleDice.cpp -o CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.s
+
 # Object files for target prob_lib
 prob_lib_OBJECTS = \
 "CMakeFiles/prob_lib.dir/src/Dice.cpp.o" \
 "CMakeFiles/prob_lib.dir/src/ThreeDicePool.cpp.o" \
 "CMakeFiles/prob_lib.dir/src/BonusDice.cpp.o" \
-"CMakeFiles/prob_lib.dir/src/PenaltyDice.cpp.o"
+"CMakeFiles/prob_lib.dir/src/PenaltyDice.cpp.o" \
+"CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o"
 
 # External object files for target prob_lib
 prob_lib_EXTERNAL_OBJECTS =
@@ -139,9 +154,10 @@ libprob_lib.a: CMakeFiles/prob_lib.dir/src/Dice.cpp.o
 libprob_lib.a: CMakeFiles/prob_lib.dir/src/ThreeDicePool.cpp.o
 libprob_lib.a: CMakeFiles/prob_lib.dir/src/BonusDice.cpp.o
 libprob_lib.a: CMakeFiles/prob_lib.dir/src/PenaltyDice.cpp.o
+libprob_lib.a: CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o
 libprob_lib.a: CMakeFiles/prob_lib.dir/build.make
 libprob_lib.a: CMakeFiles/prob_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libprob_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libprob_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/prob_lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/prob_lib.dir/link.txt --verbose=$(VERBOSE)
 

@@ -9,7 +9,7 @@ struct RandomValueInterface {
 class Dice : public RandomValueInterface {
 public:
     Dice(unsigned max, unsigned seed);
-    int roll() override;
+    virtual int roll() override;
 private:
     unsigned max;
     std::uniform_int_distribution<unsigned> dstr;

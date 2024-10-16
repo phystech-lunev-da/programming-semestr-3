@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/prob_lib.dir/src/BonusDice.cpp.o.d"
   "CMakeFiles/prob_lib.dir/src/Dice.cpp.o"
   "CMakeFiles/prob_lib.dir/src/Dice.cpp.o.d"
+  "CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o"
+  "CMakeFiles/prob_lib.dir/src/DoubleDice.cpp.o.d"
   "CMakeFiles/prob_lib.dir/src/PenaltyDice.cpp.o"
   "CMakeFiles/prob_lib.dir/src/PenaltyDice.cpp.o.d"
   "CMakeFiles/prob_lib.dir/src/ThreeDicePool.cpp.o"

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include
 
-CXX_FLAGS = 
+CXX_FLAGS = -g
 

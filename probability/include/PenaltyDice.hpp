@@ -2,10 +2,8 @@
 #pragma once
 #include "Dice.hpp"
 
-class PenaltyDice : public RandomValueInterface {
+class PenaltyDice : virtual public Dice {
 public:
-    PenaltyDice(RandomValueInterface&);
+    PenaltyDice(unsigned max, unsigned seed);
     int roll() override;
-private:
-    RandomValueInterface& dice;
 };

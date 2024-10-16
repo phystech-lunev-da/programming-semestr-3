@@ -4,6 +4,7 @@
 CMakeFiles/probability.dir/src/main.cpp.o: /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/main.cpp \
   /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/BonusDice.hpp \
   /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/Dice.hpp \
+  /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/DoubleDice.hpp \
   /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/PenaltyDice.hpp \
   /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/ThreeDicePool.hpp \
   /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/Dice.cpp \
@@ -386,6 +387,10 @@ CMakeFiles/probability.dir/src/main.cpp.o: /home/m00n-key/Documents/Programming/
 
 /usr/include/locale.h:
 
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/linux/errno.h:
+
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
@@ -394,23 +399,11 @@ CMakeFiles/probability.dir/src/main.cpp.o: /home/m00n-key/Documents/Programming/
 
 /usr/include/ctype.h:
 
-/usr/include/c++/11/bits/stl_uninitialized.h:
-
-/usr/include/c++/11/bits/stl_numeric.h:
-
-/usr/include/c++/11/iosfwd:
-
 /usr/include/c++/11/bits/specfun.h:
-
-/usr/include/c++/11/bits/range_access.h:
-
-/usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/sched.h:
 
 /usr/include/c++/11/bits/random.tcc:
-
-/usr/include/c++/11/bits/basic_ios.tcc:
 
 /usr/include/c++/11/ext/numeric_traits.h:
 
@@ -423,6 +416,10 @@ CMakeFiles/probability.dir/src/main.cpp.o: /home/m00n-key/Documents/Programming/
 /usr/include/c++/11/clocale:
 
 /usr/include/c++/11/bits/ostream.tcc:
+
+/usr/include/c++/11/bits/basic_ios.tcc:
+
+/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/DoubleDice.hpp:
 
 /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/Dice.cpp:
 
@@ -441,6 +438,16 @@ CMakeFiles/probability.dir/src/main.cpp.o: /home/m00n-key/Documents/Programming/
 /usr/include/c++/11/bits/ostream_insert.h:
 
 /usr/include/c++/11/ostream:
+
+/usr/include/c++/11/bits/stl_function.h:
+
+/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/Dice.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/c++/11/bits/stl_pair.h:
+
+/usr/include/c++/11/ext/atomicity.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
@@ -464,27 +471,39 @@ CMakeFiles/probability.dir/src/main.cpp.o: /home/m00n-key/Documents/Programming/
 
 /usr/include/alloca.h:
 
-/usr/include/c++/11/bits/exception.h:
-
-/usr/include/c++/11/pstl/glue_numeric_defs.h:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
 /usr/include/c++/11/random:
 
 /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/ThreeDicePool.hpp:
 
+/usr/include/c++/11/bits/range_access.h:
+
+/usr/include/c++/11/pstl/glue_numeric_defs.h:
+
+/usr/include/c++/11/bits/exception.h:
+
+/usr/include/c++/11/bits/istream.tcc:
+
 /usr/include/c++/11/bits/locale_facets.tcc:
 
-/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/Dice.hpp:
+/usr/include/c++/11/bits/predefined_ops.h:
 
-/usr/include/c++/11/bits/stl_function.h:
+/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/BonusDice.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/time.h:
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
-/usr/include/c++/11/bits/stl_pair.h:
+/usr/include/c++/11/bits/random.h:
 
-/usr/include/c++/11/ext/atomicity.h:
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/11/bits/char_traits.h:
+
+/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/main.cpp:
+
+/usr/include/c++/11/istream:
+
+/usr/include/c++/11/typeinfo:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
@@ -499,24 +518,6 @@ CMakeFiles/probability.dir/src/main.cpp.o: /home/m00n-key/Documents/Programming/
 /usr/include/c++/11/bits/exception_defines.h:
 
 /usr/include/c++/11/string_view:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/include/c++/11/bits/random.h:
-
-/usr/include/c++/11/bits/predefined_ops.h:
-
-/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/include/BonusDice.hpp:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/c++/11/bits/char_traits.h:
-
-/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/src/main.cpp:
-
-/usr/include/c++/11/istream:
-
-/usr/include/c++/11/typeinfo:
 
 /usr/include/c++/11/bits/basic_ios.h:
 
@@ -557,6 +558,12 @@ CMakeFiles/probability.dir/src/main.cpp.o: /home/m00n-key/Documents/Programming/
 /usr/include/c++/11/bits/codecvt.h:
 
 /usr/include/c++/11/ctime:
+
+/usr/include/c++/11/bits/stl_uninitialized.h:
+
+/usr/include/c++/11/bits/stl_numeric.h:
+
+/usr/include/c++/11/iosfwd:
 
 /usr/include/c++/11/system_error:
 
@@ -611,10 +618,6 @@ CMakeFiles/probability.dir/src/main.cpp.o: /home/m00n-key/Documents/Programming/
 /usr/include/c++/11/ext/alloc_traits.h:
 
 /usr/include/c++/11/ext/type_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
-
-/usr/include/linux/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
