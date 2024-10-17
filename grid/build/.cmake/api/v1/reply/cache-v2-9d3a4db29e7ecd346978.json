@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/build"
+			"value" : "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -155,11 +155,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/g++"
+			"type" : "STRING",
+			"value" : "/usr/bin/clang++"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -171,11 +171,27 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+					"value" : "LLVM archiver"
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-11"
+			"value" : "/usr/bin/llvm-ar-18"
+		},
+		{
+			"name" : "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "`clang-scan-deps` dependency scanner"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/bin/clang-scan-deps-18"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -187,11 +203,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+					"value" : "Generate index for LLVM archive"
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-11"
+			"value" : "/usr/bin/llvm-ranlib-18"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -283,11 +299,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc"
+			"type" : "STRING",
+			"value" : "/usr/bin/clang"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -299,11 +315,27 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+					"value" : "LLVM archiver"
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-11"
+			"value" : "/usr/bin/llvm-ar-18"
+		},
+		{
+			"name" : "CMAKE_C_COMPILER_CLANG_SCAN_DEPS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "`clang-scan-deps` dependency scanner"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/bin/clang-scan-deps-18"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -315,11 +347,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+					"value" : "Generate index for LLVM archive"
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-11"
+			"value" : "/usr/bin/llvm-ranlib-18"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -514,10 +546,6 @@
 			"properties" : 
 			[
 				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
 					"name" : "HELPSTRING",
 					"value" : "No help, variable specified on the command line."
 				}
@@ -547,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/build/CMakeFiles/pkgRedirects"
+			"value" : "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -607,7 +635,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability"
+			"value" : "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -851,7 +879,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "probability"
+			"value" : "gridlab"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1162,7 +1190,7 @@
 			"value" : "TRUE"
 		},
 		{
-			"name" : "probability_BINARY_DIR",
+			"name" : "gridlab_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1171,10 +1199,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/build"
+			"value" : "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build"
 		},
 		{
-			"name" : "probability_IS_TOP_LEVEL",
+			"name" : "gridlab_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1186,7 +1214,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "probability_SOURCE_DIR",
+			"name" : "gridlab_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1195,7 +1223,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/m00n-key/Documents/Programming/phystech/sem3-labs/probability"
+			"value" : "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid"
 		}
 	],
 	"kind" : "cache",

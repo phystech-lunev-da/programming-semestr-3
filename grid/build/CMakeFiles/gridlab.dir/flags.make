@@ -4,7 +4,7 @@
 # compile CXX with g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/include
+CXX_INCLUDES = -I/include
 
 CXX_FLAGS = -g
 

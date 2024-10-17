@@ -1,1 +1,0 @@
-g++ -g CMakeFiles/probability.dir/src/main.cpp.o -o /home/m00n-key/Documents/Programming/phystech/sem3-labs/probability/bin/probability  libprob_lib.a 

@@ -1,13 +1,13 @@
 [
 {
   "directory": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build",
-  "command": "g++  -I/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/include -g -o CMakeFiles/lib.dir/src/grid.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp",
+  "command": "g++  -I/include -g -o CMakeFiles/lib.dir/src/grid.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp",
   "file": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp",
   "output": "CMakeFiles/lib.dir/src/grid.cpp.o"
 },
 {
   "directory": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build",
-  "command": "g++  -I/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/include -g -o CMakeFiles/gridlab.dir/src/main.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/main.cpp",
+  "command": "g++  -I/include -g -o CMakeFiles/gridlab.dir/src/main.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/main.cpp",
   "file": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/main.cpp",
   "output": "CMakeFiles/gridlab.dir/src/main.cpp.o"
 }

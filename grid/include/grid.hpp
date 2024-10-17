@@ -7,6 +7,9 @@ public:
     using size_type = unsigned;
 
     Grid(size_type, size_type);
+    Grid(size_type, size_type, T const &);
+    Grid(T const&);
+
     ~Grid();
     
     Grid(Grid const &source);

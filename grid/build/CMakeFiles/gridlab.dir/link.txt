@@ -1,1 +1,1 @@
-g++ -g CMakeFiles/gridlab.dir/src/main.cpp.o -o /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/bin/gridlab  liblib.a 
+g++ -g CMakeFiles/gridlab.dir/src/main.cpp.o -o /bin/gridlab  liblib.a 
