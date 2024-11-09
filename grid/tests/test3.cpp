@@ -3,11 +3,13 @@
 #include "multi_grid.hpp"
 
 int main() {
-    MultiGrid<float, 3> const g3(1.0f, 2u, 3u, 4u);
+    MultiGrid<float, 3> g3(3.0f, 2u, 3u, 4u);
+    assert(3.0f == g3(0u, 0u, 0u));
+
     assert(3.0f == g3(1u, 1u, 1u));
 
     MultiGrid<float, 2> g2(3.0f, 2u, 5u);
-    assert(3.0f == g3(1u, 1u, 1u));
+    assert(3.0f == g2(1u, 1u));
 
     g2 = g3[1];
 

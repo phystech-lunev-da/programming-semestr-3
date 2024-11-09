@@ -27,6 +27,7 @@
 /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles/ContinuousMemCheck.dir
 /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles/ContinuousSubmit.dir
 /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles/lib.dir
+/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles/test1.dir
 /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles/test2.dir
 /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles/test3.dir
 /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles/test.dir

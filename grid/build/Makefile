@@ -504,6 +504,19 @@ lib/fast:
 .PHONY : lib/fast
 
 #=============================================================================
+# Target rules for targets named test1
+
+# Build rule for target.
+test1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test1
+.PHONY : test1
+
+# fast build rule for target.
+test1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/build
+.PHONY : test1/fast
+
+#=============================================================================
 # Target rules for targets named test2
 
 # Build rule for target.
@@ -552,6 +565,30 @@ src/grid.s: src/grid.cpp.s
 src/grid.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/src/grid.cpp.s
 .PHONY : src/grid.cpp.s
+
+tests/test1.o: tests/test1.cpp.o
+.PHONY : tests/test1.o
+
+# target to build an object file
+tests/test1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/tests/test1.cpp.o
+.PHONY : tests/test1.cpp.o
+
+tests/test1.i: tests/test1.cpp.i
+.PHONY : tests/test1.i
+
+# target to preprocess a source file
+tests/test1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/tests/test1.cpp.i
+.PHONY : tests/test1.cpp.i
+
+tests/test1.s: tests/test1.cpp.s
+.PHONY : tests/test1.s
+
+# target to generate assembly for a file
+tests/test1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/tests/test1.cpp.s
+.PHONY : tests/test1.cpp.s
 
 tests/test2.o: tests/test2.cpp.o
 .PHONY : tests/test2.o
@@ -639,11 +676,15 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... lib"
+	@echo "... test1"
 	@echo "... test2"
 	@echo "... test3"
 	@echo "... src/grid.o"
 	@echo "... src/grid.i"
 	@echo "... src/grid.s"
+	@echo "... tests/test1.o"
+	@echo "... tests/test1.i"
+	@echo "... tests/test1.s"
 	@echo "... tests/test2.o"
 	@echo "... tests/test2.i"
 	@echo "... tests/test2.s"

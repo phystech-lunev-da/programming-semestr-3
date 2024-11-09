@@ -7,6 +7,12 @@
 },
 {
   "directory": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build",
+  "command": "clang++  -I/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/include -g -std=gnu++20 -o CMakeFiles/test1.dir/tests/test1.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test1.cpp",
+  "file": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test1.cpp",
+  "output": "CMakeFiles/test1.dir/tests/test1.cpp.o"
+},
+{
+  "directory": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build",
   "command": "clang++  -I/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/include -g -std=gnu++20 -o CMakeFiles/test2.dir/tests/test2.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test2.cpp",
   "file": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test2.cpp",
   "output": "CMakeFiles/test2.dir/tests/test2.cpp.o"

@@ -16,6 +16,7 @@ int main() {
             assert(g[y_idx][x_idx] == 0.0f);
         }
     }
+    std::cout << "Great" << std::endl;
 
     std::cout << "Assignment" << std::endl;
     for (gsize_t y_idx = 0; y_idx < g.get_y_size(); y_idx++) {
@@ -23,6 +24,7 @@ int main() {
             g[y_idx][x_idx] = 1.0f;
         }
     }
+    std::cout << "Great" << std::endl;
 
     std::cout << "Checking value" << std::endl;
     for (gsize_t y_idx = 0; y_idx < g.get_y_size(); y_idx++) {
@@ -30,6 +32,7 @@ int main() {
             assert(g[y_idx][x_idx] == 1.0f);
         }
     }
+    std::cout << "Great" << std::endl;
 
     return 0;
 }

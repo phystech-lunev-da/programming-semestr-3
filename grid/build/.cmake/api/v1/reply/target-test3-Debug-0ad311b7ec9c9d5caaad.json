@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/bin/test2"
+			"path" : "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/bin/test3"
 		}
 	],
 	"backtrace" : 1,
@@ -26,13 +26,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 19,
+				"line" : 25,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 20,
+				"line" : 26,
 				"parent" : 0
 			},
 			{
@@ -81,7 +81,7 @@
 			"id" : "lib::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "test2::@6890427a1f51a3e7e1df",
+	"id" : "test3::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -102,8 +102,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "test2",
-	"nameOnDisk" : "test2",
+	"name" : "test3",
+	"nameOnDisk" : "test3",
 	"paths" : 
 	{
 		"build" : ".",
@@ -124,7 +124,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "tests/test2.cpp",
+			"path" : "tests/test3.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

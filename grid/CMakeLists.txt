@@ -16,6 +16,9 @@ include_directories(${gridlab_SOURCE_DIR}/include)
 
 add_library(lib src/grid.cpp)
 
+add_executable(test1 tests/test1.cpp)
+target_link_libraries(test1 PUBLIC lib)
+
 add_executable(test2 tests/test2.cpp)
 target_link_libraries(test2 PUBLIC lib)
 

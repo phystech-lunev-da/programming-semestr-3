@@ -45,7 +45,8 @@
 						27,
 						28,
 						29,
-						30
+						30,
+						31
 					]
 				}
 			],
@@ -90,7 +91,8 @@
 						27,
 						28,
 						29,
-						30
+						30,
+						31
 					]
 				}
 			],
@@ -301,15 +303,22 @@
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "test1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test1-Debug-05dafa70f3aef99dbd6b.json",
+					"name" : "test1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "test2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test2-Debug-004df0bd12c9fb327654.json",
+					"jsonFile" : "target-test2-Debug-e294e2f95ddf76bda52b.json",
 					"name" : "test2",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "test3::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test3-Debug-420bc926bc76c4a52b77.json",
+					"jsonFile" : "target-test3-Debug-0ad311b7ec9c9d5caaad.json",
 					"name" : "test3",
 					"projectIndex" : 0
 				}

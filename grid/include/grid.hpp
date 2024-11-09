@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include <utility>
 
-template <typename T>
+template <class T>
 class Grid final
 {
 public:
@@ -37,14 +37,13 @@ public:
 
     Grid(size_type, size_type);
     Grid(size_type, size_type, T const &);
-    Grid(T const &);
 
     ~Grid();
 
     Grid(Grid const &source);
     Grid(Grid &&source) noexcept;
 
-    Grid &operator=(Grid &);
+    Grid &operator=(Grid const &);
     Grid &operator=(Grid &&) noexcept;
     Grid &operator=(T const &t);
 
@@ -53,10 +52,17 @@ public:
 
     ProxyGrid operator[](size_type) const;
 
-    size_type get_y_size() const { return y_size; }
-    size_type get_x_size() const { return x_size; }
+    size_type const& get_y_size() { return y_size; }
+    size_type const& get_x_size() { return x_size; }
 
 private:
-    size_type y_size, x_size;
-    T * data;
+    size_type const y_size, x_size;
+    T * const data;
+};
+
+class Vec2 {
+public:
+    Vec2(int x, int y) : x(x), y(y) {}
+private:
+    int x, y;
 };
