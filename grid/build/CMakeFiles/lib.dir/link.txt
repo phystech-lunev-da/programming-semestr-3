@@ -1,2 +1,2 @@
-/usr/bin/ar qc liblib.a CMakeFiles/lib.dir/src/grid.cpp.o
-/usr/bin/ranlib liblib.a
+/usr/bin/llvm-ar-14 qc liblib.a CMakeFiles/lib.dir/src/grid.cpp.o
+/usr/bin/llvm-ranlib-14 liblib.a

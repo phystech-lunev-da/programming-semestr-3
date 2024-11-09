@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-clang++"
+	BuildStamp="20241109-1049-Experimental"
+	Name="m00n-key-HP-255-G8-Notebook-PC"
+	Generator="ctest-3.28.1"
+	CompilerName="clang++"
+	CompilerVersion="14.0.6"
+	OSName="Linux"
+	Hostname="m00n-key-HP-255-G8-Notebook-PC"
+	OSRelease="6.8.0-48-generic"
+	OSVersion="#48-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep 27 14:04:52 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="23"
+	ModelID="24"
+	ProcessorCacheSize="512"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="5864"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2538.64"
+	>
+	<Testing>
+		<StartDateTime>Nov 09 13:49 MSK</StartDateTime>
+		<StartTestTime>1731149389</StartTestTime>
+		<TestList/>
+		<EndDateTime>Nov 09 13:49 MSK</EndDateTime>
+		<EndTestTime>1731149389</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

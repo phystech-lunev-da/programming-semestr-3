@@ -1,7 +1,7 @@
-set(CMAKE_C_COMPILER "/usr/bin/clang")
+set(CMAKE_C_COMPILER "/usr/bin/clang-14")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "Clang")
-set(CMAKE_C_COMPILER_VERSION "18.1.3")
+set(CMAKE_C_COMPILER_VERSION "14.0.6")
 set(CMAKE_C_COMPILER_VERSION_INTERNAL "")
 set(CMAKE_C_COMPILER_WRAPPER "")
 set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "17")
@@ -21,10 +21,10 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "/usr/bin/ar")
-set(CMAKE_C_COMPILER_AR "/usr/bin/llvm-ar-18")
-set(CMAKE_RANLIB "/usr/bin/ranlib")
-set(CMAKE_C_COMPILER_RANLIB "/usr/bin/llvm-ranlib-18")
+set(CMAKE_AR "/usr/bin/llvm-ar-14")
+set(CMAKE_C_COMPILER_AR "/usr/bin/llvm-ar-14")
+set(CMAKE_RANLIB "/usr/bin/llvm-ranlib-14")
+set(CMAKE_C_COMPILER_RANLIB "/usr/bin/llvm-ranlib-14")
 set(CMAKE_LINKER "/usr/bin/ld")
 set(CMAKE_MT "")
 set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")
@@ -68,7 +68,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/usr/lib/llvm-18/lib/clang/18/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/usr/lib/llvm-14/lib/clang/14.0.6/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/lib;/usr/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

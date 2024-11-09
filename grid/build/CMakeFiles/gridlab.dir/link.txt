@@ -1,1 +1,0 @@
-g++ -g CMakeFiles/gridlab.dir/src/main.cpp.o -o /bin/gridlab  liblib.a 

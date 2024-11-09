@@ -73,15 +73,15 @@ CMakeFiles/lib.dir/src/grid.cpp.o: CMakeFiles/lib.dir/flags.make
 CMakeFiles/lib.dir/src/grid.cpp.o: /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp
 CMakeFiles/lib.dir/src/grid.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lib.dir/src/grid.cpp.o"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/src/grid.cpp.o -MF CMakeFiles/lib.dir/src/grid.cpp.o.d -o CMakeFiles/lib.dir/src/grid.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/src/grid.cpp.o -MF CMakeFiles/lib.dir/src/grid.cpp.o.d -o CMakeFiles/lib.dir/src/grid.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp
 
 CMakeFiles/lib.dir/src/grid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/src/grid.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp > CMakeFiles/lib.dir/src/grid.cpp.i
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp > CMakeFiles/lib.dir/src/grid.cpp.i
 
 CMakeFiles/lib.dir/src/grid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/src/grid.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp -o CMakeFiles/lib.dir/src/grid.cpp.s
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp -o CMakeFiles/lib.dir/src/grid.cpp.s
 
 # Object files for target lib
 lib_OBJECTS = \
