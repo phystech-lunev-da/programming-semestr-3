@@ -1,1 +1,1 @@
-g++ -g CMakeFiles/test2.dir/tests/test2.cpp.o -o /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test2 
+g++ -g CMakeFiles/test2.dir/tests/test2.cpp.o -o /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test2  /usr/lib/x86_64-linux-gnu/libgtest.a -lgtest_main 

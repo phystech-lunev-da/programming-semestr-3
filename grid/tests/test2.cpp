@@ -2,6 +2,7 @@
 #include <grid.hpp>
 #include <iostream>
 #include <cassert>
+#include <gtest/gtest.h>
 
 int main() {
     Grid<float> g(3, 2, 0.0f);
@@ -37,6 +38,8 @@ int main() {
         }
     }
     std::cout << "Done!" << std::endl << std::endl;
+
+    
 
     return 0;
 }

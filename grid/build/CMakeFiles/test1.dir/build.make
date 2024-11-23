@@ -92,6 +92,7 @@ test1_EXTERNAL_OBJECTS =
 
 /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test1: CMakeFiles/test1.dir/tests/test1.cpp.o
 /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test1: CMakeFiles/test1.dir/build.make
+/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test1: /usr/lib/x86_64-linux-gnu/libgtest.a
 /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test1: CMakeFiles/test1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test1.dir/link.txt --verbose=$(VERBOSE)

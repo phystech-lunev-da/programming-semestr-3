@@ -38,7 +38,6 @@ public:
     Grid(size_type, size_type);
     Grid(T const &);
     Grid(size_type, size_type, T const &);
-    Grid(size_type, size_type, T&&) noexcept;
 
     ~Grid();
 
@@ -78,25 +77,17 @@ Grid<T>::Grid(Grid<T>::size_type x_size, Grid<T>::size_type y_size) : y_size(y_s
 template <class T>
 Grid<T>::Grid(size_type x_size, size_type y_size, T const & value) : y_size(y_size), x_size(x_size) {
     void *temp_data = operator new(sizeof(T) * x_size * y_size);
-
     for (size_type i = 0; i < y_size * x_size; i++)
     {
         T* obj = static_cast<T*>(temp_data + i * sizeof(T));
-        *obj = T{value};
-    }
-
-    data = static_cast<T*>(temp_data);
-}
-
-template <class T>
-Grid<T>::Grid(size_type x_size, size_type y_size, T && value) noexcept : y_size(y_size), x_size(x_size) {
-    void *temp_data = operator new(sizeof(T) * x_size * y_size);
-    for (size_type i = 0; i < y_size * x_size; i++)
-    {
-        T* obj = static_cast<T*>(temp_data + i * sizeof(T));
-        std::swap(*obj, value);
+        (*obj) = T(value);
     }
     data = static_cast<T*>(temp_data);
+
+    // data = new T[x_size * y_size];
+    // for (Grid<T>::size_type i = 0; i < x_size * y_size; i++) {
+    //     data[i] = value;
+    // }
 }
 
 template <class T>
@@ -105,6 +96,8 @@ Grid<T>::~Grid()
     for (int i = 0; i < y_size * x_size; i++) {
         data[i].~T();
     }
+    delete data;
+    // delete[] data;
 }
 
 template <class T>
