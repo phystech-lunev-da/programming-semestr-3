@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid
+CMAKE_SOURCE_DIR = /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build
+CMAKE_BINARY_DIR = /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test2.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/test2.dir/progress.make
 include CMakeFiles/test2.dir/flags.make
 
 CMakeFiles/test2.dir/tests/test2.cpp.o: CMakeFiles/test2.dir/flags.make
-CMakeFiles/test2.dir/tests/test2.cpp.o: /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test2.cpp
+CMakeFiles/test2.dir/tests/test2.cpp.o: /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test2.cpp
 CMakeFiles/test2.dir/tests/test2.cpp.o: CMakeFiles/test2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test2.dir/tests/test2.cpp.o"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test2.dir/tests/test2.cpp.o -MF CMakeFiles/test2.dir/tests/test2.cpp.o.d -o CMakeFiles/test2.dir/tests/test2.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test2.dir/tests/test2.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test2.dir/tests/test2.cpp.o -MF CMakeFiles/test2.dir/tests/test2.cpp.o.d -o CMakeFiles/test2.dir/tests/test2.cpp.o -c /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test2.cpp
 
 CMakeFiles/test2.dir/tests/test2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test2.dir/tests/test2.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test2.cpp > CMakeFiles/test2.dir/tests/test2.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test2.cpp > CMakeFiles/test2.dir/tests/test2.cpp.i
 
 CMakeFiles/test2.dir/tests/test2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test2.dir/tests/test2.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test2.cpp -o CMakeFiles/test2.dir/tests/test2.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test2.cpp -o CMakeFiles/test2.dir/tests/test2.cpp.s
 
 # Object files for target test2
 test2_OBJECTS = \
@@ -90,15 +90,14 @@ test2_OBJECTS = \
 # External object files for target test2
 test2_EXTERNAL_OBJECTS =
 
-/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/bin/test2: CMakeFiles/test2.dir/tests/test2.cpp.o
-/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/bin/test2: CMakeFiles/test2.dir/build.make
-/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/bin/test2: liblib.a
-/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/bin/test2: CMakeFiles/test2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/bin/test2"
+/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test2: CMakeFiles/test2.dir/tests/test2.cpp.o
+/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test2: CMakeFiles/test2.dir/build.make
+/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test2: CMakeFiles/test2.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/test2.dir/build: /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/bin/test2
+CMakeFiles/test2.dir/build: /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test2
 .PHONY : CMakeFiles/test2.dir/build
 
 CMakeFiles/test2.dir/clean:
@@ -106,6 +105,6 @@ CMakeFiles/test2.dir/clean:
 .PHONY : CMakeFiles/test2.dir/clean
 
 CMakeFiles/test2.dir/depend:
-	cd /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles/test2.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles/test2.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/test2.dir/depend
 

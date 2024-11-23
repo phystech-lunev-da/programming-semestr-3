@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/bin/test3"
-  "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/bin/test3.pdb"
+  "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test3"
+  "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test3.pdb"
   "CMakeFiles/test3.dir/tests/test3.cpp.o"
   "CMakeFiles/test3.dir/tests/test3.cpp.o.d"
 )

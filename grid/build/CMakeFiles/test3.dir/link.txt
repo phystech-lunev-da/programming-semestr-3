@@ -1,1 +1,1 @@
-clang++ -g CMakeFiles/test3.dir/tests/test3.cpp.o -o /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/bin/test3  liblib.a 
+g++ -g CMakeFiles/test3.dir/tests/test3.cpp.o -o /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test3 

@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid
+CMAKE_SOURCE_DIR = /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build
+CMAKE_BINARY_DIR = /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build
 
 # Utility rule file for ContinuousUpdate.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ContinuousUpdate.dir/compiler_depend.make
 include CMakeFiles/ContinuousUpdate.dir/progress.make
 
 CMakeFiles/ContinuousUpdate:
-	/usr/local/bin/ctest -D ContinuousUpdate
+	/usr/bin/ctest -D ContinuousUpdate
 
 ContinuousUpdate: CMakeFiles/ContinuousUpdate
 ContinuousUpdate: CMakeFiles/ContinuousUpdate.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ContinuousUpdate.dir/clean:
 .PHONY : CMakeFiles/ContinuousUpdate.dir/clean
 
 CMakeFiles/ContinuousUpdate.dir/depend:
-	cd /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ContinuousUpdate.dir/depend
 

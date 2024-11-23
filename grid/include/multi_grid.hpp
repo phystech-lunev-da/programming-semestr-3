@@ -4,7 +4,6 @@
 #include <cstdlib>
 #include <utility>
 #include <concepts>
-#include <initializer_list>
 
 #include "grid.hpp"
 

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp" "CMakeFiles/lib.dir/src/grid.cpp.o" "gcc" "CMakeFiles/lib.dir/src/grid.cpp.o.d"
+  "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/src/grid.cpp" "CMakeFiles/lib.dir/src/grid.cpp.o" "gcc" "CMakeFiles/lib.dir/src/grid.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

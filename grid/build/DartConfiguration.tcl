@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid
-BuildDirectory: /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build
+SourceDirectory: /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid
+BuildDirectory: /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -14,7 +14,7 @@ CostDataFile:
 Site: m00n-key-HP-255-G8-Notebook-PC
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Linux-clang++
+BuildName: Linux-g++
 
 # Subprojects
 LabelsForSubprojects: 
@@ -27,8 +27,8 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/local/bin/cmake" "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid"
-MakeCommand: /usr/local/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+ConfigureCommand: "/usr/bin/cmake" "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid"
+MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
 # version control
@@ -63,8 +63,8 @@ UpdateOptions:
 UpdateType: 
 
 # Compiler info
-Compiler: clang++
-CompilerVersion: 14.0.6
+Compiler: g++
+CompilerVersion: 18.1.3
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
@@ -76,7 +76,7 @@ CudaSanitizerCommand:
 CudaSanitizerCommandOptions: 
 MemoryCheckType: 
 MemoryCheckSanitizerOptions: 
-MemoryCheckCommand: /usr/bin/valgrind
+MemoryCheckCommand: MEMORYCHECK_COMMAND-NOTFOUND
 MemoryCheckCommandOptions: 
 MemoryCheckSuppressionFile: 
 

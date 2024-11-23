@@ -1,26 +1,20 @@
 [
 {
-  "directory": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build",
-  "command": "clang++  -I/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/include -g -std=gnu++20 -o CMakeFiles/lib.dir/src/grid.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp",
-  "file": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp",
-  "output": "CMakeFiles/lib.dir/src/grid.cpp.o"
-},
-{
-  "directory": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build",
-  "command": "clang++  -I/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/include -g -std=gnu++20 -o CMakeFiles/test1.dir/tests/test1.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test1.cpp",
-  "file": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test1.cpp",
+  "directory": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build",
+  "command": "g++  -I/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/include -g -std=gnu++20 -o CMakeFiles/test1.dir/tests/test1.cpp.o -c /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test1.cpp",
+  "file": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test1.cpp",
   "output": "CMakeFiles/test1.dir/tests/test1.cpp.o"
 },
 {
-  "directory": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build",
-  "command": "clang++  -I/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/include -g -std=gnu++20 -o CMakeFiles/test2.dir/tests/test2.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test2.cpp",
-  "file": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test2.cpp",
+  "directory": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build",
+  "command": "g++  -I/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/include -g -std=gnu++20 -o CMakeFiles/test2.dir/tests/test2.cpp.o -c /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test2.cpp",
+  "file": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test2.cpp",
   "output": "CMakeFiles/test2.dir/tests/test2.cpp.o"
 },
 {
-  "directory": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build",
-  "command": "clang++  -I/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/include -g -std=gnu++20 -o CMakeFiles/test3.dir/tests/test3.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test3.cpp",
-  "file": "/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/tests/test3.cpp",
+  "directory": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build",
+  "command": "g++  -I/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/include -g -std=gnu++20 -o CMakeFiles/test3.dir/tests/test3.cpp.o -c /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test3.cpp",
+  "file": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test3.cpp",
   "output": "CMakeFiles/test3.dir/tests/test3.cpp.o"
 }
 ]

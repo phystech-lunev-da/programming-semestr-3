@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid
+CMAKE_SOURCE_DIR = /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build
+CMAKE_BINARY_DIR = /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lib.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/lib.dir/progress.make
 include CMakeFiles/lib.dir/flags.make
 
 CMakeFiles/lib.dir/src/grid.cpp.o: CMakeFiles/lib.dir/flags.make
-CMakeFiles/lib.dir/src/grid.cpp.o: /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp
+CMakeFiles/lib.dir/src/grid.cpp.o: /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/src/grid.cpp
 CMakeFiles/lib.dir/src/grid.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lib.dir/src/grid.cpp.o"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/src/grid.cpp.o -MF CMakeFiles/lib.dir/src/grid.cpp.o.d -o CMakeFiles/lib.dir/src/grid.cpp.o -c /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lib.dir/src/grid.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/src/grid.cpp.o -MF CMakeFiles/lib.dir/src/grid.cpp.o.d -o CMakeFiles/lib.dir/src/grid.cpp.o -c /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/src/grid.cpp
 
 CMakeFiles/lib.dir/src/grid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/src/grid.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp > CMakeFiles/lib.dir/src/grid.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/src/grid.cpp > CMakeFiles/lib.dir/src/grid.cpp.i
 
 CMakeFiles/lib.dir/src/grid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/src/grid.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/src/grid.cpp -o CMakeFiles/lib.dir/src/grid.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/src/grid.cpp -o CMakeFiles/lib.dir/src/grid.cpp.s
 
 # Object files for target lib
 lib_OBJECTS = \
@@ -93,7 +93,7 @@ lib_EXTERNAL_OBJECTS =
 liblib.a: CMakeFiles/lib.dir/src/grid.cpp.o
 liblib.a: CMakeFiles/lib.dir/build.make
 liblib.a: CMakeFiles/lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library liblib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library liblib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/lib.dir/clean:
 .PHONY : CMakeFiles/lib.dir/clean
 
 CMakeFiles/lib.dir/depend:
-	cd /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build /home/m00n-key/Documents/Programming/phystech/sem3-labs/grid/build/CMakeFiles/lib.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles/lib.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/lib.dir/depend
 
