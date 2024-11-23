@@ -96,6 +96,8 @@ private:
     value_type * data;
 };
 
+// definitions of MultiGrid<value_type, size_type>
+
 template <typename value_type, unsigned size_type>
 MultiGrid<value_type, size_type>::~MultiGrid()
 {
@@ -165,6 +167,8 @@ MultiGrid<value_type, 1u>::~MultiGrid()
 {
     delete[] data;
 }
+
+// definitions of MultiGrid<value_type, size_type>
 
 template <typename value_type>
 MultiGrid<value_type, 1u>::MultiGrid(MultiGrid<value_type, 1u> const &source) : size(source.size), data(new value_type[size])
