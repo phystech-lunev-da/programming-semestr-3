@@ -159,14 +159,15 @@ template<typename T>
 Node<T>* SkipList<T>::find(int key) {
     Node<T>* iter = &head;
     for (int iter_lvl = 0; iter_lvl < max_level; iter_lvl++) {
-        while (iter->forward[iter_lvl] != &tail && iter->forward[iter_lvl]->key < key) {
+        while (iter != &tail && iter->forward[iter_lvl]->key < key) {
             iter = iter->forward[iter_lvl];
         }
     }
+    iter = iter->forward[max_level - 1];
     if (iter->key == key) {
         return iter;
     }
-    return tail;
+    return &tail;
 }
 
 template<typename T>

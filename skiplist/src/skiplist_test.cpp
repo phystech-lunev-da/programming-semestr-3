@@ -20,6 +20,14 @@ int main() {
     skiplist.remove(27);
     std::cout << skiplist << std::endl;
 
+    std::cout << "Finding 30" << std::endl;
+    Node<int>* node = skiplist.find(30);
+    std::cout << "Found: " << node->key << std::endl;
+
+    std::cout << "Finding 25" << std::endl;
+    node = skiplist.find(25);
+    std::cout << "Found: " << node->key << std::endl;
+
     skiplist.clear();
 
     std::cout << skiplist << std::endl;
