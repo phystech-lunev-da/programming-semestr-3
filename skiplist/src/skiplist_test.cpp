@@ -36,5 +36,9 @@ int main() {
 
     std::cout << skiplist << std::endl;
 
+    SkipList<int> list1 = SkipList<int>(1000);
+
+    std::cout << list1 << std::endl;
+
     return 0;
 }

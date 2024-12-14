@@ -32,8 +32,8 @@ public:
     SkipList(const SkipList<T>&);
     SkipList(SkipList<T>&&);
 
-    //const SkipList& operator=(const SkipList<T>&);
-    //SkipList&& operator=(SkipList<T>&&);
+    const SkipList& operator=(const SkipList<T>&);
+    SkipList&& operator=(SkipList<T>&&);
 
     bool empty();
     int size();
@@ -83,8 +83,33 @@ SkipList<T>::SkipList(const SkipList<T>& copy) : SkipList(copy.coin.get_seed()) 
 
 template<typename T>
 SkipList<T>::SkipList(SkipList<T>&& copy) {
+    if (&copy == this) {
+        return;
+    }
     m_size = copy.m_size;
     max_level = copy.max_level;
+    coin = std::move(coin);
+    head = std::move(copy.head);
+    tail = std::move(copy.tail);
+}
+
+template<typename T>
+const SkipList<T>& SkipList<T>::operator=(const SkipList<T>& copy) {
+    this->m_size = 0;
+    this->max_level = 1;
+    this->coin = copy.coin;
+    Node<T>* iter = copy.head.forward[copy.max_level - 1];
+    while (iter != &(copy.tail)) {
+        insert(iter->data, iter->key);
+        iter = iter->forward[copy.max_level - 1];
+    }
+}
+
+template<typename T>
+SkipList<T>&& SkipList<T>::operator=(SkipList<T>&& copy) {
+    m_size = copy.m_size;
+    max_level = copy.max_level;
+    copy = std::move(copy.coin);
     head = std::move(copy.head);
     tail = std::move(copy.tail);
 }
