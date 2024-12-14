@@ -1,0 +1,1 @@
+g++ CMakeFiles/node_test.dir/src/node_test.cpp.o -o /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/skiplist/bin/node_test 

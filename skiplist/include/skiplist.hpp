@@ -11,7 +11,10 @@
 #include "coin.hpp"
 
 template<typename T>
-struct Node {    
+struct Node {  
+    template<typename Q>  
+    friend std::ostream& operator<<(std::ostream&, Node<Q>&);
+
     Node(T, unsigned);
     unsigned key;
     T data;
@@ -21,11 +24,26 @@ struct Node {
 template<typename T>
 Node<T>::Node(T data, unsigned key) : data(data), key(key), forward() {}
 
+template<typename T>
+std::ostream& operator<<(std::ostream& out, Node<T>& node) {
+    out << "{ Key: " << node.key << ", Data: " << node.data << " } ";
+    return out;
+}
+
 template<typename T> 
 class SkipList {
     template<typename Q>
     friend std::ostream& operator<<(std::ostream&, SkipList<Q>&);
 public:
+    // class iterator {
+    //     friend iterator& operator++(iterator&);
+    //     friend iterator& operator+(iterator&, unsigned);
+    // public:
+        
+    // private:
+    //     Node<T>* iter;
+    // };
+
     SkipList(unsigned);
     ~SkipList();
 
@@ -35,8 +53,8 @@ public:
     const SkipList& operator=(const SkipList<T>&);
     SkipList&& operator=(SkipList<T>&&);
 
-    bool empty();
-    int size();
+    bool empty() const;
+    int size() const;
 
     void insert(T, int);
     void remove(int);
@@ -115,7 +133,7 @@ SkipList<T>&& SkipList<T>::operator=(SkipList<T>&& copy) {
 }
 
 template<typename T>
-bool SkipList<T>::empty() {
+bool SkipList<T>::empty() const {
     return m_size == 0;
 }
 

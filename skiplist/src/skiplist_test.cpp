@@ -4,8 +4,8 @@
 
 int main() {
 
-    SkipList<int> skiplist(10);
-    //SkipList<int> skiplist(10000000);
+    //SkipList<int> skiplist(10);
+    SkipList<int> skiplist(10000000);
 
     std::cout << skiplist << std::endl;
 

@@ -516,6 +516,43 @@ skiplist_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/build
 .PHONY : skiplist_test/fast
 
+#=============================================================================
+# Target rules for targets named node_test
+
+# Build rule for target.
+node_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 node_test
+.PHONY : node_test
+
+# fast build rule for target.
+node_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_test.dir/build.make CMakeFiles/node_test.dir/build
+.PHONY : node_test/fast
+
+src/node_test.o: src/node_test.cpp.o
+.PHONY : src/node_test.o
+
+# target to build an object file
+src/node_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_test.dir/build.make CMakeFiles/node_test.dir/src/node_test.cpp.o
+.PHONY : src/node_test.cpp.o
+
+src/node_test.i: src/node_test.cpp.i
+.PHONY : src/node_test.i
+
+# target to preprocess a source file
+src/node_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_test.dir/build.make CMakeFiles/node_test.dir/src/node_test.cpp.i
+.PHONY : src/node_test.cpp.i
+
+src/node_test.s: src/node_test.cpp.s
+.PHONY : src/node_test.s
+
+# target to generate assembly for a file
+src/node_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_test.dir/build.make CMakeFiles/node_test.dir/src/node_test.cpp.s
+.PHONY : src/node_test.cpp.s
+
 src/random_test.o: src/random_test.cpp.o
 .PHONY : src/random_test.o
 
@@ -601,8 +638,12 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... node_test"
 	@echo "... random_test"
 	@echo "... skiplist_test"
+	@echo "... src/node_test.o"
+	@echo "... src/node_test.i"
+	@echo "... src/node_test.s"
 	@echo "... src/random_test.o"
 	@echo "... src/random_test.i"
 	@echo "... src/random_test.s"
