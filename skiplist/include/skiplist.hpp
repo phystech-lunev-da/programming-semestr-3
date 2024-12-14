@@ -79,17 +79,13 @@ bool SkipList<T>::empty() {
 
 template<typename T>
 void SkipList<T>::insert(T element, int key) {
-    std::cout << "max_level: " << max_level << std::endl;
 
     std::vector<Node<T>*> update;
     Node<T>* iter = &head;
 
-    std::cout << "Find element" << std::endl;
-
     for (int iter_lvl = 0; iter_lvl < max_level; iter_lvl++) {
         while (iter->forward[iter_lvl] != &tail && iter->forward[iter_lvl]->key < key) {
             iter = iter->forward[iter_lvl];
-            std::cout << "next" << std::endl;
         }
         update.push_back(iter);
     }
@@ -100,37 +96,25 @@ void SkipList<T>::insert(T element, int key) {
         return;
     }
 
-    std::cout << "Create element" << std::endl;
-
     Node<T>* new_node = new Node<T>(element, key);
     // в любом случае должен указывать на tail
     for (int i = 0; i < max_level; i++) {
         new_node->forward.push_back(&tail);
     }
-    std::cout << "Modify paths" << std::endl;
 
     // Выбираем случайный уровень
     // Если при испытании Бернулли выпало больше, чем уровней есть на самом деле
     // то добавляем недостающие
     int random_level;
     int coin_count = coin.sum();
-    std::cout << "coin_count: " << coin_count << std::endl;
     while (coin_count >= max_level) {
         build_level();
         update.insert(update.begin(), &head);
         new_node->forward.push_back(&tail);
     }
     random_level = max_level - coin_count - 1;
-    std::cout << "random_level: " << random_level << std::endl;
-
-    std::cout << *this << std::endl;
 
     // Идем в обратном направлении, добавляя ссылки на каждом уровне
-    std::cout << "update.size(): " << update.size() << std::endl;
-    for (typename std::vector<Node<T>*>::iterator i = update.begin(); i < update.end(); i++) {
-        std::cout << (*i)->key << " " << std::endl; 
-    }
-
     int iter_lvl = max_level - 1;
     do {
         new_node->forward[iter_lvl] = update[iter_lvl]->forward[iter_lvl];
@@ -139,19 +123,15 @@ void SkipList<T>::insert(T element, int key) {
     } while (iter_lvl >= random_level);
     
     m_size++;
-
-    std::cout << "max_level: " << max_level << std::endl;
 }
 
 template<typename T>
 void SkipList<T>::build_level() {
     Node<T>* iter = &head;
     while (iter != &tail) {
-        std::cout << "Add level" << std::endl;
         iter->forward.insert(iter->forward.begin(), &tail);
         iter = iter->forward[max_level];
     }
-    std::cout << *this << std::endl;
     max_level++;
 }
 
@@ -187,6 +167,9 @@ void SkipList<T>::remove(int key) {
     }
 
     for (int iter_lvl = 0; iter_lvl < max_level; iter_lvl++) {
+        if (update[iter_lvl]->forward[iter_lvl] != delete_node) {
+            continue;
+        }
         update[iter_lvl]->forward[iter_lvl] = delete_node->forward[iter_lvl];
     }
 
