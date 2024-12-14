@@ -29,8 +29,8 @@ public:
     SkipList(unsigned);
     ~SkipList();
 
-    //SkipList(const SkipList<T>&);
-    //SkipList(SkipList<T>&&);
+    SkipList(const SkipList<T>&);
+    SkipList(SkipList<T>&&);
 
     //const SkipList& operator=(const SkipList<T>&);
     //SkipList&& operator=(SkipList<T>&&);
@@ -70,6 +70,23 @@ SkipList<T>::SkipList(unsigned seed)
 template<typename T>
 SkipList<T>::~SkipList() {
     clear();
+}
+
+template<typename T>
+SkipList<T>::SkipList(const SkipList<T>& copy) : SkipList(copy.coin.get_seed()) {
+    Node<T>* iter = copy.head.forward[copy.max_level - 1];
+    while (iter != &(copy.tail)) {
+        insert(iter->data, iter->key);
+        iter = iter->forward[copy.max_level - 1];
+    }
+}
+
+template<typename T>
+SkipList<T>::SkipList(SkipList<T>&& copy) {
+    m_size = copy.m_size;
+    max_level = copy.max_level;
+    head = std::move(copy.head);
+    tail = std::move(copy.tail);
 }
 
 template<typename T>

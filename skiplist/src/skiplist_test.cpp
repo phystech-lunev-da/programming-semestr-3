@@ -28,6 +28,10 @@ int main() {
     node = skiplist.find(25);
     std::cout << "Found: " << node->key << std::endl;
 
+    std::cout << "Copy" << std::endl;
+    SkipList<int> copy(skiplist);   
+    std::cout << copy << std::endl; 
+
     skiplist.clear();
 
     std::cout << skiplist << std::endl;
