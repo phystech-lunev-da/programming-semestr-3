@@ -1,0 +1,7 @@
+/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles/test1.dir
+/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles/test2.dir
+/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles/test3.dir
+/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles/sampletest.dir
+/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles/test.dir
+/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles/edit_cache.dir
+/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build/CMakeFiles/rebuild_cache.dir

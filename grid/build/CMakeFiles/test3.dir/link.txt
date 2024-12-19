@@ -1,0 +1,1 @@
+g++ -g CMakeFiles/test3.dir/tests/test3.cpp.o -o /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/bin/test3  /usr/lib/x86_64-linux-gnu/libgtest.a -lgtest_main 

@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build",
+  "command": "g++  -I/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/include -g -std=gnu++20 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test1.dir/tests/test1.cpp.o -c /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test1.cpp",
+  "file": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test1.cpp",
+  "output": "CMakeFiles/test1.dir/tests/test1.cpp.o"
+},
+{
+  "directory": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build",
+  "command": "g++  -I/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/include -g -std=gnu++20 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test2.dir/tests/test2.cpp.o -c /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test2.cpp",
+  "file": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test2.cpp",
+  "output": "CMakeFiles/test2.dir/tests/test2.cpp.o"
+},
+{
+  "directory": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build",
+  "command": "g++  -I/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/include -g -std=gnu++20 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test3.dir/tests/test3.cpp.o -c /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test3.cpp",
+  "file": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test3.cpp",
+  "output": "CMakeFiles/test3.dir/tests/test3.cpp.o"
+},
+{
+  "directory": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/build",
+  "command": "g++  -I/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/include -g -std=gnu++20 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/sampletest.dir/tests/test.cpp.o -c /home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test.cpp",
+  "file": "/home/m00n-key/Documents/Programming/phystech/programming-semestr-3/grid/tests/test.cpp",
+  "output": "CMakeFiles/sampletest.dir/tests/test.cpp.o"
+}
+]
