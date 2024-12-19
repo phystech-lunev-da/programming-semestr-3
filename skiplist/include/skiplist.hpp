@@ -6,23 +6,14 @@
 
 #include <random>
 
-// Класс монетки
-// 0 - решка
-// 1 - орел
-class Coin {
-public:
-    Coin(float, unsigned);
-    unsigned flip();
-private:
-    std::default_random_engine reng;
-    std::discrete_distribution<unsigned> dstr;
-};
+#include <iostream>
 
-Coin::Coin(float p, unsigned seed) : dstr({1 - p, p}), reng(seed) {}
-unsigned Coin::flip() { return dstr(reng);}
+#include "coin.hpp"
 
 template<typename T>
-struct Node {    
+struct Node {  
+    template<typename Q>  
+    friend std::ostream& operator<<(std::ostream&, Node<Q>&);
     Node(T, unsigned);
     unsigned key;
     T data;
@@ -32,104 +23,345 @@ struct Node {
 template<typename T>
 Node<T>::Node(T data, unsigned key) : data(data), key(key), forward() {}
 
-template<typename T> 
+template<typename T>
+std::ostream& operator<<(std::ostream& out, Node<T>& node) {
+    out << "{ Key: " << node.key << ", Data: " << node.data << " } ";
+    return out;
+}
+
+template<typename T>
 class SkipList {
+    template<typename Q>
+    friend std::ostream& operator<<(std::ostream&, SkipList<Q>&);
 public:
-    SkipList();
+    class iterator {
+        friend SkipList<T>;
 
-    SkipList(const SkipList&);
-    SkipList(SkipList&&);
+        
+        friend SkipList<T>::iterator& operator+(const SkipList<T>::iterator& sum1, unsigned n) {
+            typename SkipList<T>::iterator temp = sum1;
+            for (unsigned i = 0; i < n; i++) {
+                temp++;
+            }
+            return temp;
+        }
 
-    const SkipList& operator=(const SkipList&);
-    SkipList&& operator=(SkipList&&);
+        friend bool operator==(const SkipList<T>::iterator& op1, const SkipList<T>::iterator& op2) {
+            return op1.iter == op2.iter;
+        }
 
-    bool empty();
-    unsigned size();
+        friend bool operator!=(const SkipList<T>::iterator& op1, const SkipList<T>::iterator& op2) {
+            return op1.iter != op2.iter;
+        }
+    public:
+        iterator(const iterator&);
+        iterator(iterator&&);
 
-    void insert(T, unsigned);
-    void remove(unsigned);
-    Node<T>* find(unsigned);
+        const iterator& operator=(const iterator&);
+        iterator& operator=(iterator&&);
+
+        iterator& operator++();
+        iterator operator++(int);
+        T operator*();
+
+    protected:
+        iterator(Node<T>*);
+    private:
+        Node<T>* iter;
+    };
+
+    iterator begin();
+    iterator end();
+
+    SkipList(unsigned);
+    ~SkipList();
+
+    SkipList(const SkipList<T>&);
+    SkipList(SkipList<T>&&);
+
+    const SkipList& operator=(const SkipList<T>&);
+    SkipList&& operator=(SkipList<T>&&);
+
+    bool empty() const;
+    int size() const;
+
+    void insert(T, int);
+    void remove(int);
+    Node<T>* find(int);
+
+    void build_level();
 
     void clear();
 private:
-    Node<T>* m_find_element(Node<T>*, unsigned);
-    Node<T>* m_insert_element(Node<T>*, T, unsigned);
-
-    unsigned size = 0;
     Node<T> head;
     Node<T> tail;
 
-    unsigned max_level;
+    int m_size;
+
+    int max_level;
 
     Coin coin;
 };
 
 template<typename T>
-SkipList<T>::SkipList() : size(0), head(T(), std::numeric_limits<unsigned>::min()), tail(T(), std::numeric_limits<unsigned>::max()), levels() {
-    head.forward.push_front(*tail);
+
+bool operator==(const typename SkipList<T>::iterator& op1, const typename SkipList<T>::iterator& op2) {
+    return op1.iter == op2.iter;
 }
 
 template<typename T>
-void SkipList<T>::insert(T element, unsigned key) {
+bool operator!=(const typename SkipList<T>::iterator& op1, const typename SkipList<T>::iterator& op2) {
+    return op1.iter != op2.iter;
+}
+
+
+template<typename T>
+SkipList<T>::SkipList(unsigned seed)
+    : m_size(0), head(T(), std::numeric_limits<unsigned>::min()), 
+    tail(T(), std::numeric_limits<unsigned>::max()), max_level(1), coin(0.5, seed) 
+{
+    for (unsigned i = 0; i < max_level; i++) {
+        head.forward.push_back(&tail);
+    }
+    tail.forward.push_back(nullptr);
+}
+
+template<typename T>
+SkipList<T>::~SkipList() {
+    clear();
+}
+
+template<typename T>
+SkipList<T>::SkipList(const SkipList<T>& copy) : SkipList(copy.coin.get_seed()) {
+    Node<T>* iter = copy.head.forward[copy.max_level - 1];
+    while (iter != &(copy.tail)) {
+        insert(iter->data, iter->key);
+        iter = iter->forward[copy.max_level - 1];
+    }
+}
+
+template<typename T>
+SkipList<T>::SkipList(SkipList<T>&& copy) {
+    if (&copy == this) {
+        return;
+    }
+    m_size = copy.m_size;
+    max_level = copy.max_level;
+    coin = std::move(coin);
+    head = std::move(copy.head);
+    tail = std::move(copy.tail);
+}
+
+template<typename T>
+const SkipList<T>& SkipList<T>::operator=(const SkipList<T>& copy) {
+    this->m_size = 0;
+    this->max_level = 1;
+    this->coin = copy.coin;
+    Node<T>* iter = copy.head.forward[copy.max_level - 1];
+    while (iter != &(copy.tail)) {
+        insert(iter->data, iter->key);
+        iter = iter->forward[copy.max_level - 1];
+    }
+}
+
+template<typename T>
+SkipList<T>&& SkipList<T>::operator=(SkipList<T>&& copy) {
+    m_size = copy.m_size;
+    max_level = copy.max_level;
+    copy = std::move(copy.coin);
+    head = std::move(copy.head);
+    tail = std::move(copy.tail);
+}
+
+template<typename T>
+bool SkipList<T>::empty() const {
+    return m_size == 0;
+}
+
+template<typename T>
+void SkipList<T>::insert(T element, int key) {
+
     std::vector<Node<T>*> update;
-    Node<T>* iter = *head;
-    for (unsigned iter_lvl = 0; iter_lvl < max_level; iter_lvl++) {
-        while (iter->forward[iter_lvl] != tail && iter->forward[iter_lvl]->key < key) {
+    Node<T>* iter = &head;
+
+    for (int iter_lvl = 0; iter_lvl < max_level; iter_lvl++) {
+        while (iter->forward[iter_lvl] != &tail && iter->forward[iter_lvl]->key < key) {
             iter = iter->forward[iter_lvl];
         }
         update.push_back(iter);
+    }
+
+    if (iter->forward[max_level - 1]-> key == key) {
+        iter->forward[max_level - 1]->data = element;
+        return;
     }
 
     Node<T>* new_node = new Node<T>(element, key);
     // в любом случае должен указывать на tail
-    for (unsigned i = 0; i < max_level; i++) {
-        new_node->forward[i] = tail;
+    for (int i = 0; i < max_level; i++) {
+        new_node->forward.push_back(&tail);
     }
-    unsigned iter_lvl = max_level - 1;
 
+    // Выбираем случайный уровень
+    // Если при испытании Бернулли выпало больше, чем уровней есть на самом деле
+    // то добавляем недостающие
+    int random_level;
+    int coin_count = coin.sum();
+    while (coin_count >= max_level) {
+        build_level();
+        update.insert(update.begin(), &head);
+        new_node->forward.push_back(&tail);
+    }
+    random_level = max_level - coin_count - 1;
+
+    // Идем в обратном направлении, добавляя ссылки на каждом уровне
+    int iter_lvl = max_level - 1;
     do {
         new_node->forward[iter_lvl] = update[iter_lvl]->forward[iter_lvl];
         update[iter_lvl]->forward[iter_lvl] = new_node;
-    } while (iter_lvl++ >= 0 && coin.flip() == 1);
+        iter_lvl--;
+    } while (iter_lvl >= random_level);
+    
+    m_size++;
 }
 
 template<typename T>
-Node<T>* SkipList<T>::find(unsigned key) {
-    Node<T>* iter = *head;
-    for (unsigned iter_lvl = 0; iter_lvl < max_level; iter_lvl++) {
-        while (iter->forward[iter_lvl] != tail && iter->forward[iter_lvl]->key < key) {
+void SkipList<T>::build_level() {
+    Node<T>* iter = &head;
+    while (iter != &tail) {
+        iter->forward.insert(iter->forward.begin(), &tail);
+        iter = iter->forward[max_level];
+    }
+    max_level++;
+}
+
+template<typename T>
+Node<T>* SkipList<T>::find(int key) {
+    Node<T>* iter = &head;
+    for (int iter_lvl = 0; iter_lvl < max_level; iter_lvl++) {
+        while (iter != &tail && iter->forward[iter_lvl]->key < key) {
             iter = iter->forward[iter_lvl];
         }
     }
-    return iter;
+    iter = iter->forward[max_level - 1];
+    if (iter->key == key) {
+        return iter;
+    }
+    return &tail;
 }
 
 template<typename T>
-void SkipList<T>::remove(unsigned key) {
+void SkipList<T>::remove(int key) {
     std::vector<Node<T>*> update;
-    Node<T>* iter = *head;
-    for (unsigned iter_lvl = 0; iter_lvl < max_level; iter_lvl++) {
-        while (iter->forward[iter_lvl] != tail && iter->forward[iter_lvl]->key < key) {
+    Node<T>* iter = &head;
+    for (int iter_lvl = 0; iter_lvl < max_level; iter_lvl++) {
+        while (iter->forward[iter_lvl] != &tail && iter->forward[iter_lvl]->key < key) {
             iter = iter->forward[iter_lvl];
         }
         update.push_back(iter);
     }
 
-    Node<T>* delete_node = iter->forward[max_level];
+    Node<T>* delete_node = iter->forward[max_level-1];
+    if (delete_node == &tail) {
+        return;
+    }
 
-    for (unsigned iter_lvl = 0; iter_lvl < max_level; iter_lvl++) {
-        update->forward[iter_lvl] = delete_node->forward[iter_lvl];
+    for (int iter_lvl = 0; iter_lvl < max_level; iter_lvl++) {
+        if (update[iter_lvl]->forward[iter_lvl] != delete_node) {
+            continue;
+        }
+        update[iter_lvl]->forward[iter_lvl] = delete_node->forward[iter_lvl];
     }
 
     delete delete_node;
+
+    m_size--;
 }
 
 template<typename T>
 void SkipList<T>::clear() {
     std::stack<Node<T>*> deleted_stack;
-    Node<T>* iter = *head;
-    while(iter != nullptr) {
+  
+    Node<T>* iter = head.forward[max_level - 1];
+    while(iter != &tail) {
         deleted_stack.push(iter);
-        iter = iter->next[0];
+        iter = iter->forward[max_level - 1];
     }
+    while (!deleted_stack.empty()) {
+        Node<T>* deleted = deleted_stack.top();
+        deleted_stack.pop();
+        delete deleted;
+    }
+    for (int i = 0; i < max_level - 1; i++) {
+        head.forward.pop_back();
+    }
+    head.forward[0] = &tail;
+    m_size = 0;
+    max_level = 1;
+}
+
+template<typename T>
+std::ostream& operator<<(std::ostream& out, SkipList<T>& skiplist) {
+    for (unsigned iter_lvl = 0; iter_lvl < skiplist.max_level; iter_lvl++) {
+        out << iter_lvl << ": " << "HEAD" << " - ";
+        Node<T>* iter = skiplist.head.forward[iter_lvl];
+        while (iter != &(skiplist.tail)) {
+            out << iter->key << " - ";
+            iter = iter->forward[iter_lvl];
+        }
+        out << "NIL" << std::endl;
+    }
+    out << std::endl;
+    return out;
+}
+
+// Определение функций итератора
+
+template<typename T>
+SkipList<T>::iterator::iterator(Node<T>* node) : iter(node) {}
+
+template<typename T>
+SkipList<T>::iterator::iterator(const SkipList<T>::iterator& copy) : iter(copy.iter) {}
+
+template<typename T>
+SkipList<T>::iterator::iterator(SkipList<T>::iterator&& copy) {
+    iter = std::move(copy.iter);
+}
+
+template<typename T>
+const typename SkipList<T>::iterator& SkipList<T>::iterator::operator=(const typename SkipList<T>::iterator& copy) {
+    iter = copy.iter;
+}
+
+template<typename T>
+typename SkipList<T>::iterator& SkipList<T>::iterator::operator=(typename SkipList<T>::iterator&& copy) {
+    iter = std::move(copy.iter);
+}
+
+template<typename T>
+typename SkipList<T>::iterator& SkipList<T>::iterator::operator++() {
+    this->iter = iter->forward[iter->forward.size() - 1];
+    return *this;
+}
+
+template<typename T>
+typename SkipList<T>::iterator SkipList<T>::iterator::operator++(int) {
+    SkipList<T>::iterator old = *this;
+    SkipList<T>::iterator::operator++();
+    return old;
+}
+
+template<typename T>
+T SkipList<T>::iterator::operator*() {
+    return iter->data;
+}
+
+template<typename T>
+SkipList<T>::iterator SkipList<T>::begin() {
+    return SkipList<T>::iterator(head.forward[max_level - 1]);
+}
+
+template<typename T>
+SkipList<T>::iterator SkipList<T>::end() {
+    return SkipList<T>::iterator(&tail);
 }
