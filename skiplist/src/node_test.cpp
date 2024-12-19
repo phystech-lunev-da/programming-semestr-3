@@ -42,4 +42,7 @@ int main() {
     std::cout << move.forward[1] << std::endl;
     std::cout << &node2 << std::endl;
 
+    move = std::move(node1);
+    
+
 }

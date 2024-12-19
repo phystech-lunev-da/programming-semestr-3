@@ -26,5 +26,7 @@ add_executable(skiplist_test src/skiplist_test.cpp)
 
 add_executable(node_test src/node_test.cpp)
 
+add_executable(iterator_test src/iterator_test.cpp)
+
 # add_executable(test1 tests/test.cpp)
 # target_link_libraries(test1 ${GTEST_LIBRARIES} gtest_main Threads::Threads)

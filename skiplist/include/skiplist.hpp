@@ -30,19 +30,49 @@ std::ostream& operator<<(std::ostream& out, Node<T>& node) {
     return out;
 }
 
-template<typename T> 
+template<typename T>
 class SkipList {
     template<typename Q>
     friend std::ostream& operator<<(std::ostream&, SkipList<Q>&);
 public:
-    // class iterator {
-    //     friend iterator& operator++(iterator&);
-    //     friend iterator& operator+(iterator&, unsigned);
-    // public:
+    class iterator {
+        friend SkipList<T>;
+
         
-    // private:
-    //     Node<T>* iter;
-    // };
+        friend SkipList<T>::iterator& operator+(const SkipList<T>::iterator& sum1, unsigned n) {
+            typename SkipList<T>::iterator temp = sum1;
+            for (unsigned i = 0; i < n; i++) {
+                temp++;
+            }
+            return temp;
+        }
+
+        friend bool operator==(const SkipList<T>::iterator& op1, const SkipList<T>::iterator& op2) {
+            return op1.iter == op2.iter;
+        }
+
+        friend bool operator!=(const SkipList<T>::iterator& op1, const SkipList<T>::iterator& op2) {
+            return op1.iter != op2.iter;
+        }
+    public:
+        iterator(const iterator&);
+        iterator(iterator&&);
+
+        const iterator& operator=(const iterator&);
+        iterator& operator=(iterator&&);
+
+        iterator& operator++();
+        iterator operator++(int);
+        T operator*();
+
+    protected:
+        iterator(Node<T>*);
+    private:
+        Node<T>* iter;
+    };
+
+    iterator begin();
+    iterator end();
 
     SkipList(unsigned);
     ~SkipList();
@@ -73,6 +103,17 @@ private:
 
     Coin coin;
 };
+
+template<typename T>
+bool operator==(const typename SkipList<T>::iterator& op1, const typename SkipList<T>::iterator& op2) {
+    return op1.iter == op2.iter;
+}
+
+template<typename T>
+bool operator!=(const typename SkipList<T>::iterator& op1, const typename SkipList<T>::iterator& op2) {
+    return op1.iter != op2.iter;
+}
+
 
 template<typename T>
 SkipList<T>::SkipList(unsigned seed)
@@ -272,4 +313,55 @@ std::ostream& operator<<(std::ostream& out, SkipList<T>& skiplist) {
     }
     out << std::endl;
     return out;
+}
+
+// Определение функций итератора
+
+template<typename T>
+SkipList<T>::iterator::iterator(Node<T>* node) : iter(node) {}
+
+template<typename T>
+SkipList<T>::iterator::iterator(const SkipList<T>::iterator& copy) : iter(copy.iter) {}
+
+template<typename T>
+SkipList<T>::iterator::iterator(SkipList<T>::iterator&& copy) {
+    iter = std::move(copy.iter);
+}
+
+template<typename T>
+const typename SkipList<T>::iterator& SkipList<T>::iterator::operator=(const typename SkipList<T>::iterator& copy) {
+    iter = copy.iter;
+}
+
+template<typename T>
+typename SkipList<T>::iterator& SkipList<T>::iterator::operator=(typename SkipList<T>::iterator&& copy) {
+    iter = std::move(copy.iter);
+}
+
+template<typename T>
+typename SkipList<T>::iterator& SkipList<T>::iterator::operator++() {
+    this->iter = iter->forward[iter->forward.size() - 1];
+    return *this;
+}
+
+template<typename T>
+typename SkipList<T>::iterator SkipList<T>::iterator::operator++(int) {
+    SkipList<T>::iterator old = *this;
+    SkipList<T>::iterator::operator++();
+    return old;
+}
+
+template<typename T>
+T SkipList<T>::iterator::operator*() {
+    return iter->data;
+}
+
+template<typename T>
+SkipList<T>::iterator SkipList<T>::begin() {
+    return SkipList<T>::iterator(head.forward[max_level - 1]);
+}
+
+template<typename T>
+SkipList<T>::iterator SkipList<T>::end() {
+    return SkipList<T>::iterator(&tail);
 }

@@ -529,6 +529,43 @@ node_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_test.dir/build.make CMakeFiles/node_test.dir/build
 .PHONY : node_test/fast
 
+#=============================================================================
+# Target rules for targets named iterator_test
+
+# Build rule for target.
+iterator_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iterator_test
+.PHONY : iterator_test
+
+# fast build rule for target.
+iterator_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/iterator_test.dir/build.make CMakeFiles/iterator_test.dir/build
+.PHONY : iterator_test/fast
+
+src/iterator_test.o: src/iterator_test.cpp.o
+.PHONY : src/iterator_test.o
+
+# target to build an object file
+src/iterator_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/iterator_test.dir/build.make CMakeFiles/iterator_test.dir/src/iterator_test.cpp.o
+.PHONY : src/iterator_test.cpp.o
+
+src/iterator_test.i: src/iterator_test.cpp.i
+.PHONY : src/iterator_test.i
+
+# target to preprocess a source file
+src/iterator_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/iterator_test.dir/build.make CMakeFiles/iterator_test.dir/src/iterator_test.cpp.i
+.PHONY : src/iterator_test.cpp.i
+
+src/iterator_test.s: src/iterator_test.cpp.s
+.PHONY : src/iterator_test.s
+
+# target to generate assembly for a file
+src/iterator_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/iterator_test.dir/build.make CMakeFiles/iterator_test.dir/src/iterator_test.cpp.s
+.PHONY : src/iterator_test.cpp.s
+
 src/node_test.o: src/node_test.cpp.o
 .PHONY : src/node_test.o
 
@@ -638,9 +675,13 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... iterator_test"
 	@echo "... node_test"
 	@echo "... random_test"
 	@echo "... skiplist_test"
+	@echo "... src/iterator_test.o"
+	@echo "... src/iterator_test.i"
+	@echo "... src/iterator_test.s"
 	@echo "... src/node_test.o"
 	@echo "... src/node_test.i"
 	@echo "... src/node_test.s"
