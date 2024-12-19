@@ -14,7 +14,6 @@ template<typename T>
 struct Node {  
     template<typename Q>  
     friend std::ostream& operator<<(std::ostream&, Node<Q>&);
-
     Node(T, unsigned);
     unsigned key;
     T data;
@@ -105,6 +104,7 @@ private:
 };
 
 template<typename T>
+
 bool operator==(const typename SkipList<T>::iterator& op1, const typename SkipList<T>::iterator& op2) {
     return op1.iter == op2.iter;
 }
@@ -190,7 +190,6 @@ void SkipList<T>::insert(T element, int key) {
         }
         update.push_back(iter);
     }
-
 
     if (iter->forward[max_level - 1]-> key == key) {
         iter->forward[max_level - 1]->data = element;
@@ -282,6 +281,7 @@ void SkipList<T>::remove(int key) {
 template<typename T>
 void SkipList<T>::clear() {
     std::stack<Node<T>*> deleted_stack;
+  
     Node<T>* iter = head.forward[max_level - 1];
     while(iter != &tail) {
         deleted_stack.push(iter);
